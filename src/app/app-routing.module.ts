@@ -6,7 +6,7 @@ import { SettingsContainerComponent } from './settings';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'about',
+    redirectTo: 'examples',
     pathMatch: 'full'
   },
   {
@@ -19,8 +19,12 @@ const routes: Routes = [
     loadChildren: 'app/examples/examples.module#ExamplesModule'
   },
   {
+    path: 'auth',
+    loadChildren: 'app/auth/auth.module#AuthModule'
+  },
+  {
     path: '**',
-    redirectTo: 'about'
+    redirectTo: 'examples'
   }
 ];
 
@@ -28,7 +32,7 @@ const routes: Routes = [
   // useHash supports github.io demo page, remove in your app
   imports: [
     RouterModule.forRoot(routes, {
-      useHash: true,
+      // useHash: true,
       scrollPositionRestoration: 'enabled'
     })
   ],

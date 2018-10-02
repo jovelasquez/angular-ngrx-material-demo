@@ -10,6 +10,7 @@ import { StaticModule } from './static';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthModule } from '@app/auth/auth.module';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { AppComponent } from './app.component';
     SharedModule,
 
     // features
+    AuthModule,
     StaticModule,
     SettingsModule,
 
